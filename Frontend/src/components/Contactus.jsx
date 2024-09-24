@@ -8,7 +8,7 @@ function Contact() {
             <Navbar className="bg-white shadow-md" />
             <div className="min-h-screen bg-blue-50 flex flex-col items-center py-12 px-4">
                 {/* Hero Section */}
-                <section className="text-center mb-12">
+                <section className="text-center mb-12 mt-5">
                     <h1 className="text-4xl font-bold text-gray-800">Get in Touch</h1>
                     <p className="text-lg text-gray-600 mt-2">
                         We're here to assist you with any questions or concerns. Reach out to us and we’ll get back to you as soon as possible.

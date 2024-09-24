@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Cards = ({ item }) => {
     return (
         <div className="p-4 mt-5 my-3">
-            <div className="card bg-base-100 md:w-96 shadow-xl md:h-120 w-90 hover:cursor-pointer transform transition-transform duration-300 hover:scale-105 dark:bg-slate-800 dark:text-white">
+            <div className="card bg-base-100 md:w-96 shadow-xl md:h-110 w-80 hover:cursor-pointer transform transition-transform duration-300 hover:scale-105 dark:bg-slate-800 dark:text-white">
                 <figure className="h-70 w-full overflow-hidden">
                     <img
                         src={item.image}
