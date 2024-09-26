@@ -5,6 +5,7 @@ import Courses from './courses/Courses';
 import Signup from './components/Signup';
 import Contact from './components/Contactus';
 import About from './components/About';
+import Admin from './components/Admin';
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from './context/AuthProvider';
 import Final from "./components/Final";
@@ -20,6 +21,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/about' element={<About />} />
+        <Route path='/admin'  element={<Admin/>}/>
         
         {/* Final route where item is passed as state */}
         <Route 
