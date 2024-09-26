@@ -10,7 +10,7 @@ function Navbar() {
     const navItems = (
         <>
             <li><a href="/">Home</a></li>
-            <li><a href="/course">Course</a></li>
+            <li><a href="/course">Store</a></li>
             <li><a href="/contact">Contact</a></li>
             <li><a href="/about">About</a></li>
         </>
@@ -84,7 +84,7 @@ function Navbar() {
                             {navItems}
                         </ul>
                     </div>
-                    <div className="hidden md:block">
+                    {/* <div className="hidden md:block">
                         <label className="input input-bordered flex items-center gap-2">
                             <input type="text" className="grow border-none rounded-md" placeholder="Search" />
                             <svg
@@ -98,7 +98,7 @@ function Navbar() {
                                     clipRule="evenodd" />
                             </svg>
                         </label>
-                    </div>
+                    </div> */}
                     <label className="swap swap-rotate">
                         <input type="checkbox" className="theme-controller" value="synthwave" />
                         {/* sun svg */}
