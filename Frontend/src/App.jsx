@@ -9,7 +9,11 @@ import Admin from './components/Admin';
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from './context/AuthProvider';
 import Final from "./components/Final";
-
+import Transaction from './components/Transaction';
+import Payupi from "./components/PaymentUPI"
+import PayCOD from "./components/PaymentCOD"
+import PayNetBanking from './components/PaymentNetBanking';
+import PayCard from "./components/PaymentCard"
 function App() {
   const [Authuser] = useAuth();
   
@@ -29,7 +33,13 @@ function App() {
           element={Authuser ? <Final /> : <Navigate to="/signup" />} 
           
         />
+        <Route path='/transaction'  element={<Transaction/>}/>
+        <Route path='/payment/upi' element={<Payupi/>}/>
+        <Route path='/payment/cod' element={<PayCOD/>}/>
+        <Route path='/payment/netbanking' element={<PayNetBanking/>}/>
+        <Route path='/payment/card' element={<PayCard/>}/>
       </Routes>
+      
       <Toaster />
     </div>
   );

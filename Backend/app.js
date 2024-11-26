@@ -14,7 +14,7 @@ const URI =process.env.MONGODBURI;
 
 app.use(cors())
 app.use(express.json())
-// connecting MongoDb 
+
 try {
     mongoose.connect(URI,{
         useNewUrlParser:true,

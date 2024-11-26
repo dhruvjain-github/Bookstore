@@ -47,7 +47,11 @@ function Final() {
               <p className="text-red-500 text-sm md:text-base">Save 25%</p>
             </div>
             <div className="card-actions mt-4 flex justify-end">
-              <button className="btn btn-buy transform transition-all duration-300 hover:scale-110 hover:bg-pink-700 text-white bg-pink-500 text-sm md:text-base px-4 py-2">
+              {/* Buy Now Button */}
+              <button
+                className="btn btn-buy transform transition-all duration-300 hover:scale-110 hover:bg-pink-700 text-white bg-pink-500 text-sm md:text-base px-4 py-2"
+                onClick={() => navigate('/transaction', { state: { item } })}
+              >
                 Buy Now
               </button>
             </div>
@@ -59,4 +63,3 @@ function Final() {
 }
 
 export default Final;
-4
