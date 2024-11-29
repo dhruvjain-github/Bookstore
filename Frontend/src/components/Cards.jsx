@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Cards = ({ item }) => {
     return (
-        <div className="p-4 mt-5 my-3">
-            <div className="card bg-base-100 md:w-96 shadow-xl md:h-110 w-80 hover:cursor-pointer transform transition-transform duration-300 hover:scale-105 dark:bg-slate-800 dark:text-white">
-                <figure className="h-70 w-full overflow-hidden">
+        <div className="p-4">
+            <div className="card bg-base-100 shadow-xl w-full max-w-sm hover:cursor-pointer transform transition-transform duration-300 hover:scale-105 dark:bg-slate-800 dark:text-white">
+                <figure className="h-52 overflow-hidden">
                     <img
                         src={item.image}
-                        alt={item.name} // Use the item's name as the alt text for better accessibility
+                        alt={item.name}
                         className="w-full h-full object-cover"
                     />
                 </figure>
@@ -22,8 +22,6 @@ const Cards = ({ item }) => {
                     </div>
                     <div className="card-actions justify-between mt-4">
                         <div className="badge badge-outline">{item.price}</div>
-
-                        {/* Pass the item data via the state prop */}
                         <Link to="/buy" state={{ item }}>
                             <button className="badge px-5 py-3 badge-outline hover:bg-pink-500 hover:text-white duration-300">
                                 Buy
