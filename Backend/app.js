@@ -26,11 +26,17 @@ try {
   console.log('Error: ', error);
 }
 
-// Serve static files for frontend (adjust path as necessary)
+// Serve static files for frontend
 app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 
+// Your API routes
 app.use('/book', BookRoute);
 app.use('/user', UserRoute);
+
+// Catch-all route for React Router (ensure it goes after all your API routes)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
