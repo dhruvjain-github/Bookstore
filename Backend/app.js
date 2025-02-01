@@ -26,7 +26,7 @@ try {
   console.log('Error: ', error);
 }
 
-// Serve static files for frontend
+// Serve static files for frontend (use 'dist' instead of 'build')
 app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
 
 // Your API routes
@@ -34,8 +34,9 @@ app.use('/book', BookRoute);
 app.use('/user', UserRoute);
 
 // Catch-all route for React Router (ensure it goes after all your API routes)
+// Change 'build' to 'dist' here
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'frontend', 'dist', 'index.html'));
 });
 
 app.listen(PORT, () => {
