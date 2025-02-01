@@ -27,7 +27,7 @@ try {
 }
 
 // Serve static files for frontend
-app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
 
 // Your API routes
 app.use('/book', BookRoute);
