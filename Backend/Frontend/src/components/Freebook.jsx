@@ -1,27 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import Cards from '../components/Cards'; // Adjust the import path as necessary
-import axios from "axios";
+
+const staticBooks = [
+    {
+        "id": 1,
+        "name": "Magazine",
+        "title": "Stay updated with the latest trends and stories.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/biography-concept_23-2149341897.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Puzzles",
+        "title": "Challenge your mind with fun and engaging puzzles.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/comics_23-2149341899.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Encyclopedia",
+        "title": "Explore vast knowledge across various subjects.",
+        "price": 0,
+        "category": "Free",
+        "image": "https://img.freepik.com/free-vector/biography-concept_23-2149341897.jpg"
+    }
+];
 
 function Freebook() {
-
-    const [Book, setBook] = useState([]);
-
-    useEffect(() => {
-        const getBook = async () => {
-            try {
-                const res = await axios.get("https://bookstore-lv01.onrender.com/book");
-                console.log(res.data);
-                setBook(res.data.filter((data)=> data.category==="Free"));
-            } catch (error) {
-                console.log("Error:", error);
-            }
-        };
-        getBook();
-    }, []);
+    const [Book, setBook] = useState(staticBooks);
 
     const settings = {
         dots: true,
