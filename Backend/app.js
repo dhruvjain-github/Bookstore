@@ -9,7 +9,7 @@ import UserRoute from "./routes/user.route.js"
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 const URI =process.env.MONGODBURI;
 
 app.use(cors())
@@ -17,8 +17,6 @@ app.use(express.json())
 
 try {
     mongoose.connect(URI,{
-        useNewUrlParser:true,
-        useUnifiedTopology:true
     })
     console.log("Connected to MongoDB")
 } catch (error) {
