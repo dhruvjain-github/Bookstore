@@ -1,4 +1,5 @@
 import React from 'react';
+import dotenv from "dotenv";
 import Home from '../src/home/Home';
 import { Routes, Route, Navigate } from "react-router-dom";
 import Courses from './courses/Courses';
