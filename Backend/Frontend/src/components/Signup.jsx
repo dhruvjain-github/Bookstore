@@ -19,7 +19,7 @@ function Signup() {
             password: data.password
         }
 
-        await axios.post("https://bookstore-wkha.onrender.com/user/signup", userInfo)
+        await axios.post("https://bookstore-lv01.onrender.com/user/signup", userInfo)
             .then((res) => {
                 console.log(res.data);
                 if (res.data) {

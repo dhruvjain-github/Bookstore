@@ -9,7 +9,7 @@ function Course() {
     useEffect(() => {
         const getBook = async () => {
             try {
-                const res = await axios.get("https://bookstore-wkha.onrender.com/book");
+                const res = await axios.get("https://bookstore-lv01.onrender.com/book");
                 console.log(res.data);
                 setBook(res.data.filter((data)=>data.category!="Free"));
             } catch (error) {
